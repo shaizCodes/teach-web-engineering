@@ -29,6 +29,6 @@ Over the next 2-3 months (or longer), I will be teaching web engineering to a gr
 ## Day-wise Lessons
 
 - [Day 01](day-01/README.md): Internet, Web, Protocols, CORS, Auth, and HTTP Fundamentals
-- Day 02: (To be added)
+- [Day 02](day-02/README.md): HTML, HyperText, Markup, DTD, and More
 
 Stay tuned for daily updates!
