@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn CSS Box Model and Selectors</title>
+    <style>
+        /* Select Element by Tag Name */
+        p {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        /* Select Element by Attribute */
+        [id] {
+            background-color: lightgray;
+        }
+
+        /* Select Element by Attribute and Value */
+        [id="p3"] {
+            color: red;
+        }
+
+        /* Select Element by Tag Name along with Attribute and Value */
+        p[id="p4"] {
+            color: blue;
+        }
+
+        /* Select Element by ID */
+        #p5 {
+            background-color: blue;
+        }
+
+        /* Select Element by Class Name */
+        .paragraph {
+            background-color: lightseagreen;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Practice CSS Box Model and Selectors</h1>
+
+    <section style="background:#f5f5f5; border:1px solid #ccc; padding:1em; margin-bottom:2em; border-radius:8px;">
+        <h2>When to Use Which CSS Selector?</h2>
+        <ul>
+            <li><strong>ID Selector (<code>#id</code>)</strong>: Use when you want to style a <u>unique</u> element on the page. Each ID should be used only once per page.</li>
+            <li><strong>Class Selector (<code>.class</code>)</strong>: Use when you want to apply the same style to <u>multiple</u> elements. Classes can be reused on any number of elements.</li>
+            <li><strong>Tag Name Selector (<code>tagname</code>)</strong>: Use when you want to style <u>all elements</u> of a certain type (e.g., all <code>&lt;p&gt;</code> tags).</li>
+            <li><strong>Attribute Selector (<code>[attribute]</code>)</strong>: Use when you want to style elements that have a specific attribute, regardless of its value.</li>
+            <li><strong>Attribute and Value Selector (<code>[attribute="value"]</code>)</strong>: Use when you want to style elements with a specific attribute <u>and</u> a specific value.</li>
+            <li><strong>Tag + Attribute Selector (<code>tag[attribute="value"]</code>)</strong>: Use when you want to style a specific type of element with a specific attribute and value.</li>
+        </ul>
+        <p style="font-size:0.98em; color:#555; margin-top:1em;">
+            <strong>Summary:</strong> Use <b>ID</b> for one-of-a-kind elements, <b>class</b> for groups, <b>tag</b> for all of a type, and <b>attribute</b> selectors for more specific targeting.<br>
+            <em>Choosing the right selector keeps your CSS efficient and maintainable.</em>
+        </p>
+    </section>
+
+    <h2>Select Element by Tag Name</h2>
+    <p>
+        <code>p { border: 1px solid black; padding: 10px; }</code>
+    </p>
+
+    <h2>Select Element by Attribute</h2>
+    <p id="">
+        <code>[id] { background-color: lightgray; }</code>
+    </p>
+
+    <h2>Select Element by Attribute and Value</h2>
+    <p id="p3">
+        <code>[id="p3"] {color: red;}</code>
+    </p>
+
+    <h2>Select Element by Tag Name along with Attribute and Value</h2>
+    <p id="p4">
+        <code>p[id="p4"] {color: blue;}</code>
+    </p>
+
+    <h2>Select Element by ID</h2>
+    <p id="p5">
+        <code>#p5 {background-color: blue;}</code>
+    </p>
+
+    <h2>Select Element by Class Name</h2>
+    <p class="paragraph">
+        <code>.paragraph {background-color: lightseagreen;}</code>
+    </p>
+</body>
+</html>

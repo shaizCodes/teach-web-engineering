@@ -31,5 +31,6 @@ Over the next 2-3 months (or longer), I will be teaching web engineering to a gr
 - [Day 01](day-01/README.md): Internet, Web, Protocols, CORS, Auth, and HTTP Fundamentals
 - [Day 02](day-02/README.md): HTML, HyperText, Markup, DTD, and More
 - [Day 03](day-03/README.md): Introduction to CSS, Chrome DevTools, Block vs Inline Elements
+- [Day 04](day-04/README.md): CSS Box Model, Selectors, Chrome DevTools Sources tab
 
 Stay tuned for daily updates!
