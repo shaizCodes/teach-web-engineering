@@ -9,6 +9,7 @@
   - [3. Visualizing Selector Effects](#3-visualizing-selector-effects)
   - [4. Chrome DevTools Workflow](#4-chrome-devtools-workflow)
 - [Code Sample](#code-sample)
+- [Assignment](#assignment)
 - [Reflections](#reflections)
 
 ## Overview
@@ -77,6 +78,12 @@ Explored a variety of CSS selectors to target elements:
 ## Code Sample
 
 See [index.html](./index.html) for the demo file used in this lesson.
+
+---
+
+## Assignment
+
+[Click here to view the assignment for Day 04](./ASSIGNMENT.md).
 
 ---
 
