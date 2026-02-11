@@ -32,5 +32,6 @@ Over the next 2-3 months (or longer), I will be teaching web engineering to a gr
 - [Day 02](day-02/README.md): HTML, HyperText, Markup, DTD, and More
 - [Day 03](day-03/README.md): Introduction to CSS, Chrome DevTools, Block vs Inline Elements
 - [Day 04](day-04/README.md): CSS Box Model, Selectors, Chrome DevTools Sources tab
+- [Day 05](day-05/README.md): BEM, Emmet shortcuts, CSS Units and calc()
 
 Stay tuned for daily updates!

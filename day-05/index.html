@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 05 - CSS Units Demo</title>
+    <style>
+        * {
+            /*
+              to include padding and border in the element's total width and height...
+              controlling box sizing to be border box instead of content box...
+            */
+            box-sizing: border-box;
+            /*
+              to have better control over spacing, because different elements have different spacing styles on different browsers...
+              controlling margin and padding to be 0 by default will make it easier to manage spacing consistently across different elements and browsers...
+            */
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 0.5rem;
+        }
+
+        .header,
+        .footer {
+            /* setting height relative to viewport height */
+            height: 10vh;
+            background-color: lightgray;
+        }
+        .header {
+            /*
+              it is the default value of normal font size, because it inherits its value from its parent element...
+              html is the root element, and 1 rem = 16px, so 1em in body is also 16px...
+              
+              customize this now to see the effect on child elements...
+            */
+            font-size: 16px;
+            border-bottom: 1px solid black;
+        }
+        .footer {
+            font-size: 30px;
+            border-top: 1px solid black;
+        }
+
+        .main {
+            /*
+              computing height so it adapts automatically based on viewport height...
+              
+              80vh, because header and footer height compounds to 20vh...
+              1rem because its parent element has padding of 0.5rem on top and 0.5rem on bottom...
+            */
+            height: calc(80vh - 1rem);
+            padding: 0.5rem;
+            background-color: lightblue;
+            /* setting font size relative to viewport width */
+            font-size: 2vw;
+        }
+        .panel {
+            /* setting height relative to parent element */
+            height: calc(90%);
+            background-color: lightcoral;
+            border-right: 1px solid black;
+            /* to make panels sit next to each other */
+            display: inline-block;
+        }
+        .panel--full {
+            /* setting width relative to parent element */
+            width: 100%;
+            height: 10%;
+            border-bottom: 1px solid black;
+            border-right: none;
+        }
+        #panel-1 {
+            /* setting width relative to parent element */
+            width: 5%;
+        }
+        #panel-2 {
+            /* setting width relative to parent element */
+            width: 70%;
+        }
+        #panel-3 {
+            /* setting width relative to parent element */
+            width: 25%;
+            border-right: none;
+        }
+        .text {
+            /* setting font size relative to parent element */
+            font-size: 1em;
+            border: 2px solid blue;
+            display: inline-block;
+        }
+        .text--rem {
+            /* setting font size relative to root element */
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <span class="text">Parent font size is <b><code>16px</code></b> by default, and child font size is <b><code>1em</code></b></span>
+    </div>
+    <div class="main">
+        <div class="panel panel--full">
+            <span class="text">Grand parent's font size changed to <b><code>2vw</code></b>, and children have <b><code>1em</code></b> font size.</span>
+        </div>
+        <div class="panel" id="panel-1">
+            <span class="text--rem">1rem</span>
+        </div><div class="panel" id="panel-2">
+            <span class="text--rem">1rem</span>
+        </div><div class="panel" id="panel-3">
+            <span class="text--rem">1rem</span>
+        </div>
+    </div>
+    <div class="footer"><span class="text">Parent font size changed to <b><code>30px</code></b>, and child font size: <b><code>1em</code></b></span></div>
+</body>
+</html>
