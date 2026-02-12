@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 06 - Accessibility and Formatting Tags</title>
+    <style>
+        :root {
+            --ink: #1c1c1c;
+            --muted: #5d5d5d;
+            --line: #d7d7d7;
+            --surface: #fafafa;
+        }
+
+        body {
+            font-family: "Georgia", "Times New Roman", serif;
+            color: var(--ink);
+            margin: 0;
+            background: #f4f1ea;
+        }
+
+        .page {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 32px 20px 64px;
+        }
+
+        .header {
+            margin-bottom: 24px;
+        }
+
+        .header h1 {
+            margin: 0 0 8px;
+            font-size: 2.4rem;
+        }
+
+        .header p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        .section {
+            margin: 28px 0;
+            padding: 20px;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+        }
+
+        .section h2 {
+            margin-top: 0;
+        }
+
+        .card {
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            padding: 12px 14px;
+            background: white;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 2px 6px;
+            font-family: "Courier New", monospace;
+            background: #efefef;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .example {
+            margin: 10px 0 0;
+            padding: 10px;
+            background: #f8f6f1;
+            border-left: 3px solid #b5a67a;
+        }
+
+        .note {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .spacer {
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <h1>Accessibility and Formatting Tags</h1>
+            <p>Focus: Chrome DevTools Accessibility panel, and how semantic formatting affects screen readers.</p>
+        </div>
+
+        <div class="section">
+            <h2>Why semantics matter</h2>
+            <p>
+                Screen readers and the Accessibility tree care about meaning, not just visuals. Some tags describe meaning
+                (<span class="tag">strong</span>, <span class="tag">del</span>), while others are only visual
+                (<span class="tag">b</span>, <span class="tag">i</span>, <span class="tag">s</span>).
+            </p>
+            <p class="note">Use DevTools &rarr; Elements &rarr; Accessibility icon to compare how each example is announced.</p>
+        </div>
+
+        <div class="section">
+            <h2>Semantic formatting (meaningful)</h2>
+            <div class="grid">
+                <div class="card">
+                    <div><span class="tag">strong</span> - importance</div>
+                    <div class="example">Please read the <strong>updated schedule</strong> today.</div>
+                </div>
+                <div class="card">
+                    <div><span class="tag">em</span> - emphasis</div>
+                    <div class="example">This is <em>not</em> the final answer.</div>
+                </div>
+                <div class="card">
+                    <div><span class="tag">del</span> - deleted text</div>
+                    <div class="example">I am a <del>junior</del> <strong>senior</strong> engineer.</div>
+                </div>
+                <div class="card">
+                    <div><span class="tag">s</span> - strikethrough style. Use <span class="tag">del</span> instead.</div>
+                    <div class="example">This is <s>crossed out</s> text.</div>
+                </div>
+                <div class="card">
+                    <div><span class="tag">ins</span> - inserted text</div>
+                    <div class="example">You are now an <ins>alumni</ins> of the program.</div>
+                </div>
+                <div class="card">
+                    <div><span class="tag">sub</span> - subscript</div>
+                    <div class="example">Water is H<sub>2</sub>O.</div>
+                </div>
+                <div class="card">
+                    <div><span class="tag">sup</span> - superscript</div>
+                    <div class="example">The formula is x<sup>2</sup> + y<sup>2</sup>.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Presentational formatting (visual only)</h2>
+            <div class="grid">
+                <div class="card">
+                    <div><span class="tag">b</span> - bold style only</div>
+                    <div class="example">This is <b>bold</b> but not more important.</div>
+                </div>
+                <div class="card">
+                    <div><span class="tag">i</span> - italic style only</div>
+                    <div class="example">This is <i>italic</i> without emphasis.</div>
+                </div>
+                <div class="card">
+                    <div><span class="tag">u</span> - underline style</div>
+                    <div class="example">This is <u>underlined</u> text.</div>
+                </div>
+                <div class="card">
+                    <div><span class="tag">small</span> - smaller font</div>
+                    <div class="example">This is <small>fine print</small> only.</div>
+                </div>
+                <div class="card">
+                    <div><span class="tag">big</span> - larger font (obsolete)</div>
+                    <div class="example">This is <big>larger</big> text.</div>
+                </div>
+            </div>
+            <p class="note spacer">These tags usually do not add meaning in the Accessibility tree.</p>
+        </div>
+
+        <div class="section">
+            <h2>Try this in DevTools</h2>
+            <ul>
+                <li>Inspect each example and open the Accessibility panel.</li>
+                <li>Compare how <span class="tag">strong</span> vs <span class="tag">b</span> is announced.</li>
+                <li>Compare how <span class="tag">del</span> and <span class="tag">ins</span> appear in the tree.</li>
+                <li>Notice how <span class="tag">sub</span> and <span class="tag">sup</span> change the accessible name.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
