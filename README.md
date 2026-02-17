@@ -34,5 +34,6 @@ Over the next 2-3 months (or longer), I will be teaching web engineering to a gr
 - [Day 04](day-04/README.md): CSS Box Model, Selectors, Chrome DevTools Sources tab
 - [Day 05](day-05/README.md): BEM, Emmet shortcuts, CSS Units and calc()
 - [Day 06](day-06/README.md): Accessibility in DevTools, Semantic vs Presentational Formatting
+- [Day 07](day-07/README.md): Flexbox Layouts and Card Components
 
 Stay tuned for daily updates!
