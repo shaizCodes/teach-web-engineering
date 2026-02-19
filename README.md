@@ -35,5 +35,6 @@ Over the next 2-3 months (or longer), I will be teaching web engineering to a gr
 - [Day 05](day-05/README.md): BEM, Emmet shortcuts, CSS Units and calc()
 - [Day 06](day-06/README.md): Accessibility in DevTools, Semantic vs Presentational Formatting
 - [Day 07](day-07/README.md): Flexbox Layouts and Card Components
+- [Day 08](day-08/README.md): Flexbox Layouts: `flex-wrap`, `flex-grow`, Navigation Bars and Headers
 
 Stay tuned for daily updates!
